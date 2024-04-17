@@ -1,0 +1,268 @@
+{
+  "lang": "en-us",
+  "name": "Discord Bot - No Name Studio",
+  "short_name": "No Name Bot",
+  "description": "No Name Bot is a multifunctional, user-friendly and intuitive Discord Bot created by No Name Studio that provides best features in Discord servers and you don't need to invite Ticket Bot, Giveaway Bot, Music Bot, Moderation Bot, Chatbot, Fun bot or anything else. The website provides a range of tools and settings that enable users to change bot's responses, permissions, and commands to match personal preferences.",
+  "display": "minimal-ui",
+  "background_color": "#24262D",
+  "theme_color": "#434ce8",
+  "orientation": "any",
+  "author": "No Name Studio",
+  "copyright": "(c) Copyright 2024 No Name Studio",
+  "icons": [
+    {
+      "src": "https://cdn.nnsvn.me/cp/img/icons/icon-72x72.png",
+      "type": "image/png",
+      "sizes": "72x72"
+    },
+    {
+      "src": "https://cdn.nnsvn.me/cp/img/icons/icon-96x96.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "https://cdn.nnsvn.me/cp/img/icons/icon-128x128.png",
+      "type": "image/png",
+      "sizes": "128x128"
+    },
+    {
+      "src": "https://cdn.nnsvn.me/cp/img/icons/icon-144x144.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "https://cdn.nnsvn.me/cp/img/icons/icon-152x152.png",
+      "type": "image/png",
+      "sizes": "152x152"
+    },
+    {
+      "src": "https://cdn.nnsvn.me/cp/img/icons/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://cdn.nnsvn.me/cp/img/icons/icon-384x384.png",
+      "type": "image/png",
+      "sizes": "384x384"
+    },
+    {
+      "src": "https://cdn.nnsvn.me/cp/img/icons/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Dashboard",
+      "url": "https://cp.nnsvn.me/dashboard",
+      "description": "Manage your server with ease",
+      "icons": [
+        {
+          "src": "https://cdn.nnsvn.me/cp/img/icons/icon-96x96.png",
+          "type": "image/png",
+          "sizes": "96x96"
+        },
+        {
+          "src": "https://cdn.nnsvn.me/cp/img/icons/icon-512x512.png",
+          "type": "image/png",
+          "sizes": "512x512"
+        }
+      ]
+    },
+    {
+      "name": "Applications",
+      "url": "https://cp.nnsvn.me/apps",
+      "description": "List of applications",
+      "icons": [
+        {
+          "src": "https://cdn.nnsvn.me/cp/img/icons/icon-96x96.png",
+          "type": "image/png",
+          "sizes": "96x96"
+        },
+        {
+          "src": "https://cdn.nnsvn.me/cp/img/icons/icon-512x512.png",
+          "type": "image/png",
+          "sizes": "512x512"
+        }
+      ]
+    },
+    {
+      "name": "Shortlink Manager",
+      "url": "https://cp.nnsvn.me/shortlink",
+      "description": "Manage your shortlinks",
+      "icons": [
+        {
+          "src": "https://cdn.nnsvn.me/cp/img/icons/icon-96x96.png",
+          "type": "image/png",
+          "sizes": "96x96"
+        },
+        {
+          "src": "https://cdn.nnsvn.me/cp/img/icons/icon-512x512.png",
+          "type": "image/png",
+          "sizes": "512x512"
+        }
+      ]
+    },
+    {
+      "name": "Notepad",
+      "url": "https://cp.nnsvn.me/notepad",
+      "description": "Create and manage your notes",
+      "icons": [
+        {
+          "src": "https://cdn.nnsvn.me/cp/img/icons/icon-96x96.png",
+          "type": "image/png",
+          "sizes": "96x96"
+        },
+        {
+          "src": "https://cdn.nnsvn.me/cp/img/icons/icon-512x512.png",
+          "type": "image/png",
+          "sizes": "512x512"
+        }
+      ]
+    },
+    {
+      "name": "Commands",
+      "url": "https://cp.nnsvn.me/commands",
+      "description": "List of commands",
+      "icons": [
+        {
+          "src": "https://cdn.nnsvn.me/cp/img/icons/icon-96x96.png",
+          "type": "image/png",
+          "sizes": "96x96"
+        },
+        {
+          "src": "https://cdn.nnsvn.me/cp/img/icons/icon-512x512.png",
+          "type": "image/png",
+          "sizes": "512x512"
+        }
+      ]
+    },
+    {
+      "name": "Embed Builder",
+      "url": "https://cp.nnsvn.me/embedbuilder",
+      "description": "Create and manage your embeds",
+      "icons": [
+        {
+          "src": "https://cdn.nnsvn.me/cp/img/icons/icon-96x96.png",
+          "type": "image/png",
+          "sizes": "96x96"
+        },
+        {
+          "src": "https://cdn.nnsvn.me/cp/img/icons/icon-512x512.png",
+          "type": "image/png",
+          "sizes": "512x512"
+        }
+      ]
+    },
+    {
+      "name": "Profile",
+      "url": "https://cp.nnsvn.me/profile",
+      "description": "Manage your profile",
+      "icons": [
+        {
+          "src": "https://cdn.nnsvn.me/cp/img/icons/icon-96x96.png",
+          "type": "image/png",
+          "sizes": "96x96"
+        },
+        {
+          "src": "https://cdn.nnsvn.me/cp/img/icons/icon-512x512.png",
+          "type": "image/png",
+          "sizes": "512x512"
+        }
+      ]
+    },
+    {
+      "name": "Articles",
+      "url": "https://cp.nnsvn.me/p",
+      "description": "Articles",
+      "icons": [
+        {
+          "src": "https://cdn.nnsvn.me/cp/img/icons/icon-96x96.png",
+          "type": "image/png",
+          "sizes": "96x96"
+        },
+        {
+          "src": "https://cdn.nnsvn.me/cp/img/icons/icon-512x512.png",
+          "type": "image/png",
+          "sizes": "512x512"
+        }
+      ]
+    },
+    {
+      "name": "Support",
+      "url": "https://cp.nnsvn.me/requests",
+      "description": "Get support",
+      "icons": [
+        {
+          "src": "https://cdn.nnsvn.me/cp/img/icons/icon-96x96.png",
+          "type": "image/png",
+          "sizes": "96x96"
+        },
+        {
+          "src": "https://cdn.nnsvn.me/cp/img/icons/icon-512x512.png",
+          "type": "image/png",
+          "sizes": "512x512"
+        }
+      ]
+    },
+    {
+      "name": "UET Toolkit",
+      "url": "https://cp.nnsvn.me/uettoolkit",
+      "description": "UET Toolkit",
+      "icons": [
+        {
+          "src": "https://cdn.nnsvn.me/cp/img/icons/icon-96x96.png",
+          "type": "image/png",
+          "sizes": "96x96"
+        },
+        {
+          "src": "https://cdn.nnsvn.me/cp/img/icons/icon-512x512.png",
+          "type": "image/png",
+          "sizes": "512x512"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "https://cdn.nnsvn.me/cp/media/dbshow/pc_settings.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Homescreen of Bot Settings"
+    },
+    {
+      "src": "https://cdn.nnsvn.me/cp/media/dbshow/mb_settings.png",
+      "sizes": "1242x2688",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Homescreen of Bot Settings"
+    },
+    {
+      "src": "https://cdn.nnsvn.me/cp/media/dbshow/mb_emoji.png",
+      "sizes": "1242x2688",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Homescreen of Emojis"
+    }
+  ],
+  "prefer_related_applications": false,
+  "start_url": "/",
+  "dir": "auto",
+  "categories": [
+    "games",
+    "music",
+    "productivity",
+    "security",
+    "utilities"
+  ],
+  "edge_side_panel": {
+    "preferred_width": 1
+  },
+  "display_override": [
+    "minimal-ui",
+    "browser",
+    "standalone",
+    "window-controls-overlay"
+  ]
+}
