@@ -1,7 +1,7 @@
 const CACHE = "nnsvn-offline-v2";
 
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
-importScripts('https://arc.io/arc-sw-core.js')
+importScripts('https://arc.io/arc-sw-core.js');
 
 // TODO: replace the following with the correct offline fallback page i.e.: const offlineFallbackPage = "offline.html";
 const offlineFallbackPage = "offline";
@@ -36,7 +36,7 @@ self.addEventListener('fetch', (event) => {
         const networkResp = await fetch(event.request);
         return networkResp;
       } catch (error) {
-
+        console.error('Fetch failed; returning offline page instead.', error);
         const cache = await caches.open(CACHE);
         const cachedResp = await cache.match(offlineFallbackPage);
         return cachedResp;
