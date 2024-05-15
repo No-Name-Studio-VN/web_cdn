@@ -1,4 +1,4 @@
-const CACHE = "nnsvn-offline-v2";
+const CACHE = "nnsvn-offline-v3";
 
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
 importScripts('https://arc.io/arc-sw-core.js');
