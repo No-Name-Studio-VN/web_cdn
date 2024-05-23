@@ -1,2 +1,43 @@
-// ©️2024 No Name Studio, All right reserved //
-function _12D(R,O){var j=_12j();return _12D=function(D,g){D=D-0xe0;var y=j[D];return y;},_12D(R,O);}(function(R,O){var h=_12D,o=_12D,K=_12D,Q=_12D,f=_12D,j=R();while(!![]){try{var D=parseInt(h(0x150))/0x1*(parseInt(o(0xea))/0x2)+-parseInt(h(0x107))/0x3+parseInt(K(0x109))/0x4+parseInt(o(0x116))/0x5+parseInt(h(0xe3))/0x6+-parseInt(f(0x15b))/0x7+parseInt(Q(0x122))/0x8*(-parseInt(f(0x156))/0x9);if(D===O)break;else j['push'](j['shift']());}catch(g){j['push'](j['shift']());}}}(_12j,0x89af7));var _12O=(function(){var R=!![];return function(O,j){var D=R?function(){var W=_12D;if(j){var g=j[W(0x14c)](O,arguments);return j=null,g;}}:function(){};return R=![],D;};}()),_12R=_12O(this,function(){var N=_12D,z=_12D,Y=_12D,r=_12D,X=_12D,R;try{var O=Function(N(0x10d)+'nction()\x20'+(z(0x124)+Y(0x130)+'rn\x20this\x22)('+'\x20)')+');');R=O();}catch(L){R=window;}var j=new RegExp(z(0x12e)+z(0x123)+'BbOrgJPWww'+r(0x108)+'jQJiNXGFdw'+']','g'),D=(Y(0x14d)+r(0xf4)+r(0x132)+Y(0xfb)+'BbOrgJPWww'+r(0x108)+'jQJiNXGFdw')[z(0x13f)](j,'')['split'](';'),g,y,p,n,J=function(Z,V,k){var A=z,l=r,m=r;if(Z[A(0x134)]!=V)return![];for(var u=0x0;u<V;u++){for(var E=0x0;E<k[A(0x134)];E+=0x2){if(u==k[E]&&Z[l(0x135)](u)!=k[E+0x1])return![];}}return!![];},v=function(Z,V,k){return J(V,k,Z);},T=function(Z,V,k){return v(V,Z,k);},a=function(Z,V,k){return T(V,k,Z);};for(var U in R){if(J(U,0x8,[0x7,0x74,0x5,0x65,0x3,0x75,0x0,0x64])){g=U;break;}}for(var C in R[g]){if(a(0x6,C,[0x5,0x6e,0x0,0x64])){y=C;break;}}for(var G in R[g]){if(T(G,[0x7,0x6e,0x0,0x6c],0x8)){p=G;break;}}if(!('~'>y))for(var b in R[g][p]){if(v([0x7,0x65,0x0,0x68],b,0x8)){n=b;break;}}if(!g||!R[g])return;var H=R[g][y],P=!!R[g][p]&&R[g][p][n],B=H||P;if(!B)return;var M=![];for(var s=0x0;s<D[X(0x134)];s++){var y=D[s],q=y[0x0]===String[Y(0xeb)+'de'](0x2e)?y[r(0x147)](0x1):y,x=B[z(0x134)]-q['length'],w=B[N(0x101)](q,x),F=w!==-0x1&&w===x;F&&((B[N(0x134)]==y[N(0x134)]||y[X(0x101)]('.')===0x0)&&(M=!![]));}if(!M){var c=new RegExp(r(0xee)+N(0x15a)+'zRqmUrvpFx'+'H]','g'),t=(z(0xe2)+X(0x131)+r(0x15a)+r(0xe8)+'H')['replace'](c,'');R[g][p]=t;}});function _12j(){var R3=['tant;\x0a\x20\x20\x20\x20','-border-co','[DIrhjOZwD','-multiple\x20','color:\x20#53','lection--m','ontainer--','\x20\x20\x20border-','sgvnM.mHeQ','election--','selection_','}\x0a\x20\x20\x0a\x20\x20\x20\x20.','or:\x20#ebf1f','fff\x0a\x20\x20\x20\x20}\x0a','tainer--de','RZostNPuVC','{\x0a\x20\x20\x20\x20\x20\x20\x20\x20','lection--s','rtant;\x0a\x20\x20\x20','ht:\x2040px\x0a\x20','ice__remov','indexOf','portant;\x0a\x20','-bs-table-','multiple\x20.','--bootstra','t2-selecti','431799ivHhnN','VDdNkHkMKZ','2075664bvuqYF','\x20\x20\x20\x20\x0a\x20\x20\x20\x20.','\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20','.select2-s','return\x20(fu','-classic\x20.','election__','_rendered\x20','ow,\x0a\x20\x20\x20\x20.s','ingle\x20.sel','lect2-sele','background','r:\x20var(--b','4550140vVdGJS','container-','n--single,','\x20\x20\x20\x20height','ect2-selec','hoice\x20{\x0a\x20\x20','ic\x20.select','ine-height','ered,\x0a\x20\x20\x20\x20','single,\x0a\x20\x20','default\x20.s','\x0a\x20\x20\x20\x20.sele','116672eimynT','SzyRZNPuVC','{}.constru','selection-','\x20\x20.select2','-container','border-col','ct2-contai','lor)\x20!impo','rendered\x20.','ultiple\x20.s','\x20}\x0a\x20\x20\x20\x20\x0a\x20\x20','[jPbkQgMHQ','ntainer--b','ctor(\x22retu','tZ:bwlDank',';lSzocalyh','{\x0a\x20\x20\x20\x20\x20\x20co','length','charCodeAt','ltiple,\x0a\x20\x20','a85;\x0a\x20\x20\x20\x20\x20','ner--class','\x20{\x0a\x20\x20\x20\x20\x20\x20l','(--bs-body','e\x20{\x0a\x20\x20\x20\x20\x20\x20','6;\x0a\x20\x20\x20\x20\x20\x20c','s-border-w','oice,\x0a\x20\x20\x20\x20','replace','d\x20var(--bs','color:\x20var','-bg)\x20!impo','e-color)\x20!','.select2-c','color)\x20!im','ection--mu','slice','fault\x20.sel','\x20\x20\x20\x20\x20\x20colo','7px\x20!impor','\x20\x20\x20\x20.selec','apply','cjp.PbkQnn','--default\x20','\x20\x20color:\x20#','1fpdrbn','lection__c','p-5\x20.selec','ltiple\x20.se','--classic\x20','elect2-con','450FUHiVX','2-selectio','\x20.select2-','--multiple','dBpJVmDrHz','7837648txEcfF','-default\x20.','important;','\x0a\x20\x20\x20\x20\x20\x20\x20\x20b','ootstrap-5','selection\x20','r-radius:\x20','elect2-sel','39bff;\x0a\x20\x20\x20',':\x20auto\x0a\x20\x20\x20','DaIbourhjO','3261024omxQuJ','\x20line-heig','\x20\x20\x20\x20\x20borde','9bff;\x0a\x20\x20\x20\x20','select2-se','zRqmUrvpFx','tion__rend','1168616FmkPzn','fromCharCo'];_12j=function(){return R3;};return _12j();}_12R(),((()=>{var S=_12D,I=_12D,R0=_12D,R1=_12D,R2=_12D;window['InjectCSS'](S(0x121)+'ct2-contai'+I(0x138)+I(0x11c)+'2-selectio'+I(0x118)+S(0x121)+R0(0x129)+R0(0x138)+R1(0x11c)+I(0x157)+'n--single\x20'+I(0x10c)+R0(0x10f)+'arrow,\x0a\x20\x20\x20'+R0(0x158)+S(0x117)+I(0x10e)+S(0xe7)+R1(0xfd)+R2(0x112)+R2(0x11a)+I(0xe9)+I(0x11e)+R0(0x144)+'ontainer--'+R2(0x120)+'elect2-sel'+R2(0x146)+R0(0x136)+'\x20\x20.select2'+'-container'+I(0x14e)+R2(0x10c)+R2(0xf5)+S(0x11f)+S(0x126)+R2(0x127)+I(0x14e)+R0(0x10c)+'election--'+'single\x20.se'+S(0x113)+'ction__arr'+R2(0x111)+R1(0x155)+R1(0xfa)+S(0x148)+R0(0x11a)+'tion--sing'+'le\x20.select'+R1(0x157)+'n__rendere'+'d\x20{\x0a\x20\x20\x20\x20\x20\x20'+R2(0x128)+I(0xf8)+R1(0x13c)+'olor:\x20#5a6'+R2(0x137)+'\x20height:\x204'+'0px;\x0a\x20\x20\x20\x20\x20'+I(0xe4)+I(0xff)+'\x20\x20\x20}\x0a\x20\x20\x20\x20\x0a'+I(0x14b)+'t2-contain'+'er--defaul'+'t\x20.select2'+'-selection'+I(0x159)+R2(0x139)+R2(0x11d)+':\x2027px;\x0a\x20\x20'+I(0x119)+I(0xe1)+R0(0x12d)+R0(0x126)+S(0x127)+R2(0x154)+I(0x10c)+S(0xf5)+R0(0x104)+'select2-se'+I(0x151)+'hoice,\x0a\x20\x20\x20'+R2(0x158)+R1(0x117)+R2(0x15c)+S(0xe7)+I(0xf1)+R0(0x12c)+R2(0x162)+'ection__ch'+R1(0x13e)+'.select2-c'+R1(0xf2)+'default\x20.s'+I(0x162)+R2(0x146)+R2(0x153)+(I(0x113)+'ction__cho'+R1(0x100)+R0(0x13b)+I(0x114)+'-color:\x20#5'+R0(0xe0)+R2(0xf3)+I(0xf0)+R1(0xe6)+S(0x14f)+R1(0xf9)+R1(0x10a)+'select2-co'+R1(0x12f)+R1(0x15f)+I(0x158)+S(0x160)+R0(0xfc)+S(0x141)+'(--bs-tabl'+S(0x143)+R2(0x15d)+R0(0x15e)+'ackground-'+R1(0x141)+S(0x13a)+R2(0x142)+'rtant;\x0a\x20\x20\x20'+'\x20\x20\x20\x20\x20borde'+R2(0x115)+R1(0x13d)+'idth)\x20soli'+R0(0x140)+I(0xed)+R1(0x12a)+R1(0xfe)+S(0xe5)+R2(0x161)+S(0x14a)+I(0xec)+R0(0xf7)+'select2-co'+R0(0x12f)+R0(0x15f)+S(0x158)+R0(0x125)+R2(0xef)+S(0x10c)+R2(0x10f)+R1(0x12b)+'select2-se'+R1(0x151)+R2(0x11b)+I(0x149)+S(0x115)+'s-table-co'+S(0x12a)+R1(0xfe)+'\x20}\x0a\x20\x20\x20\x20\x0a\x20\x20'+R1(0x126)+R1(0x127)+S(0x105)+R1(0x152)+R1(0x106)+'on--single'+'\x20.select2-'+R0(0xf6)+I(0x110)+R0(0x133)+'lor:\x20var(-'+S(0x103)+S(0x145)+R2(0x102)+R2(0x10b)));})());
+window.InjectCSS(`
+    .select2-container--classic .select2-selection--single,
+    .select2-container--classic .select2-selection--single .select2-selection__arrow,
+    .select2-container--classic .select2-selection--single .select2-selection__rendered,
+    .select2-container--default .select2-selection--multiple,
+    .select2-container--default .select2-selection--single,
+    .select2-container--default .select2-selection--single .select2-selection__arrow,
+    .select2-container--default .select2-selection--single .select2-selection__rendered {
+      border-color: #ebf1f6;
+      color: #5a6a85;
+      height: 40px;
+      line-height: 40px
+    }
+    
+    .select2-container--default .select2-selection--multiple {
+      line-height: 27px;
+      height: auto
+    }
+    
+    .select2-container--classic .select2-selection--multiple .select2-selection__choice,
+    .select2-container--default .select2-selection--multiple .select2-selection__choice,
+    .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+      background-color: #539bff;
+      border-color: #539bff;
+      color: #fff
+    }
+    
+    .select2-container--bootstrap-5 .select2-selection {
+        color: var(--bs-table-color) !important;
+        background-color: var(--bs-body-bg) !important;
+        border: var(--bs-border-width) solid var(--bs-border-color) !important;
+        border-radius: 7px !important;
+    }
+  
+    .select2-container--bootstrap-5 .select2-selection--multiple .select2-selection__rendered .select2-selection__choice {
+        color: var(--bs-table-color) !important;
+    }
+    
+    .select2-container--bootstrap-5 .select2-selection--single .select2-selection__rendered {
+      color: var(--bs-table-color) !important;
+    }
+
+    `);
