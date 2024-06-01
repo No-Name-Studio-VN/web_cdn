@@ -172,9 +172,9 @@
       ]
     },
     {
-      "name": "Articles",
-      "url": "https://cp.nnsvn.me/p",
-      "description": "Articles",
+      "name": "Blog",
+      "url": "https://cp.nnsvn.me/blog",
+      "description": "Get the latest news and updates",
       "icons": [
         {
           "src": "https://cdn.nnsvn.me/cp/img/icons/icon-96x96.png",
