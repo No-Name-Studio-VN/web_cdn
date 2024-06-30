@@ -12,7 +12,7 @@
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://cp.nnsvn.me/login?returnurl=%2Fdashboard</loc>
+  <loc>https://cp.nnsvn.me/dashboard</loc>
   <lastmod>2024-03-20T10:10:52+00:00</lastmod>
   <priority>0.80</priority>
 </url>
@@ -42,12 +42,12 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://cp.nnsvn.me/shortlink/preview</loc>
+  <loc>https://cp.nnsvn.me/shortlink</loc>
   <lastmod>2024-03-20T10:10:52+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://cp.nnsvn.me/login?returnurl=%2Fnotepad</loc>
+  <loc>https://cp.nnsvn.me/notepad</loc>
   <lastmod>2024-03-20T10:10:52+00:00</lastmod>
   <priority>0.80</priority>
 </url>
@@ -72,17 +72,12 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://cp.nnsvn.me/login?returnurl=%2Fredeem</loc>
-  <lastmod>2024-03-20T10:10:52+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
   <loc>https://cp.nnsvn.me/offline</loc>
   <lastmod>2024-03-20T10:10:52+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://cp.nnsvn.me/p/changelog</loc>
+  <loc>https://cp.nnsvn.me/blog/p/changelog</loc>
   <lastmod>2024-03-20T10:10:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
@@ -91,11 +86,5 @@
   <lastmod>2024-03-20T10:10:52+00:00</lastmod>
   <priority>0.64</priority>
 </url>
-<url>
-  <loc>https://cp.nnsvn.me/embedbuilder/viewport</loc>
-  <lastmod>2024-03-20T10:10:52+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
 
 </urlset>

@@ -1,1 +1,0 @@
-window.ContentHandler.ToggleMultiSelect("#admin_roles",{isDisabled:!0,placeholder:"Select a role"}),window.ContentHandler.ToggleMultiSelect("#manager_roles",{placeholder:"Select a role"});
