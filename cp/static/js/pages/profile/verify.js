@@ -2,7 +2,7 @@
             <div class="row">
               <div class="col-12">
                 <div class="d-flex align-items-center justify-content-between">
-                  <div class="">
+                  <div>
                     <h4 class="card-title">${t.name}</h5>
                     <h6 class="card-subtitle text-muted">${t.description}</h6>
                   </div>
@@ -14,4 +14,4 @@
                 </div>
               </div>
             </div>
-          `)})}},error:function(t){logger.error(t)}})})();
+          `)})}},error:function(t){console.error(t)}})})();

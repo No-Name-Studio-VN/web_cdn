@@ -20472,41 +20472,6 @@ html * {
   border-color: var(--bs-primary)
 }
 
-body .apexcharts-xaxistooltip {
-  padding: 9px 10px;
-  border-radius: 9px
-}
-
-body .apexcharts-tooltip {
-  border-radius: 13px
-}
-
-body .apexcharts-tooltip-marker {
-  border-radius: 4px
-}
-
-body .apexcharts-tooltip.apexcharts-theme-dark {
-  background: rgba(17, 28, 45, .8)
-}
-
-body .apexcharts-tooltip.apexcharts-theme-dark .apexcharts-tooltip-title {
-  border-bottom: 0;
-  background: rgba(17, 28, 45, .7)
-}
-
-body .apexcharts-xaxistooltip.apexcharts-theme-dark {
-  background: #111c2d;
-  border: 1px solid rgba(17, 28, 45, .7)
-}
-
-body .sales-chart .apexcharts-bar-series.apexcharts-plot-series .apexcharts-series path {
-  clip-path: inset(0 0 15% 0 round 20px)
-}
-
-body .revenue-chart .apexcharts-bar-series.apexcharts-plot-series .apexcharts-series path {
-  clip-path: inset(0 0 5% 0 round 20px)
-}
-
 .bootstrap-switch {
   margin-bottom: 10px
 }

@@ -1,4 +1,4 @@
-(()=>{function s(e){var t;return(n[e]||(t=n[e]={i:e,l:!1,exports:{}},i[e].call(t.exports,t,t.exports,s),t.l=!0,t)).exports}var i,n;window.InjectCSS(`    
+(()=>{function s(e){var t;return(n[e]||(t=n[e]={i:e,l:!1,exports:{}},i[e].call(t.exports,t,t.exports,s),t.l=!0,t)).exports}var i,n;InjectCSS(`    
     .choices {
         position: relative;
         margin-bottom: 24px;

@@ -1,5 +1,6 @@
-document.documentElement.setAttribute("data-bs-theme","dark"),window.InjectCSS(`body {
-    background: url("${client.cdn}/static/img/loading_bg${Math.floor(3*Math.random())}.jpg") no-repeat center center fixed;
+document.documentElement.setAttribute("data-bs-theme","dark"),InjectCSS(`
+  body {
+    background: url("${client.cdn}/static/img/loading_bg${Math.floor(3*Math.random())}.jpg") no-repeat center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

@@ -1,4 +1,4 @@
-window.InjectCSS(`
+InjectCSS(`
     .wizard {
       display: block;
       width: 100%;

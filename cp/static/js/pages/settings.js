@@ -19,7 +19,7 @@
                 </div>
               </div>
             </div>
-            `);let t='<div class="">';for(let e=0;e<s.length;e++){var a=s[e],o=(n.setUA(a.agent),n.getResult()),d=`
+            `);let t="<div>";for(let e=0;e<s.length;e++){var a=s[e],o=(n.setUA(a.agent),n.getResult()),d=`
                 <div class="d-flex align-items-center justify-content-between py-3 border-bottom">
                   <div class="d-flex align-items-center gap-3">
                     <i class="${d=o.device.type,l[d]||l.default} text-secondary d-block fs-7" width="26" height="26"></i>
@@ -38,4 +38,4 @@
             <div class='mt-3'>
               <a href="https://bot.nnsvn.me/support" class="btn btn-light-primary text-primary w-100 py-1">Need Help ?</a>
             </div>
-            `),$("#signout_all").on("click",function(){$.ajax({url:"/auth/sessions",method:"DELETE",contentType:"application/json",success:function(e){i.empty(),i.append('<p class="text-center">No sessions found</p>')},error:function(e){logger.error(e),NotificationHandler.show({content:"Failed to remove all devices",type:"error"})}})})}}})})})})();
+            `),$("#signout_all").on("click",function(){$.ajax({url:"/auth/sessions",method:"DELETE",contentType:"application/json",success:function(e){i.empty(),i.append('<p class="text-center">No sessions found</p>')},error:function(e){console.error(e),NotificationHandler.show({content:"Failed to remove all devices",type:"error"})}})})}}})})})})();

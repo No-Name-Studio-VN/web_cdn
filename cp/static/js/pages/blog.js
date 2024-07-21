@@ -1,4 +1,4 @@
-(()=>{window.InjectCSS(`.card .blog {
+(()=>{InjectCSS(`.card .blog {
     border: none;
     backdrop-filter: blur(0px)!important;
     -webkit-backdrop-filter: blur(0px)!important;
@@ -61,4 +61,4 @@
             </div>
           </div>
         </div>
-      </div>`;return c.innerHTML=m,c}(t,e);s.appendChild(t)}),t.style.display="none",s.classList.remove("d-none")},error:e=>{logger.error(e),NotificationHandler.show({title:"Error",content:"Failed to fetch articles",type:"error"})}})})();
+      </div>`;return c.innerHTML=m,c}(t,e);s.appendChild(t)}),t.style.display="none",s.classList.remove("d-none")},error:e=>{console.error(e),NotificationHandler.show({title:"Error",content:"Failed to fetch articles",type:"error"})}})})();
