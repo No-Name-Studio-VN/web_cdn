@@ -1,14 +1,9 @@
 @charset "UTF-8";
-
-
-
 /*!
  * Bootstrap  v5.3.3 (https://getbootstrap.com/)
  * Copyright 2011-2024 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-
-
 
 :root,
 [data-bs-theme="light"] {
@@ -6311,7 +6306,6 @@ fieldset:disabled .btn {
 .progress-stacked {
   --bs-progress-height: 7px;
   --bs-progress-font-size: 0.65625rem;
-  --bs-progress-bg: #fff;
   --bs-progress-border-radius: var(--bs-border-radius);
   --bs-progress-box-shadow: var(--bs-box-shadow-inset);
   --bs-progress-bar-color: #fff;
@@ -18973,7 +18967,7 @@ fieldset:disabled .btn {
     display: none !important;
   }
 }
-:root {
+:root, [data-bs-theme="light"] {
     --bs-red-rgb: 232, 21, 0;
     --bs-orange-rgb: 247, 100, 0;
     --bs-yellow-rgb: 244, 161, 0;
@@ -18994,6 +18988,12 @@ fieldset:disabled .btn {
     --bs-indigo-soft-rgb: 227, 221, 250;
     --bs-purple-soft-rgb: 228, 221, 247;
     --bs-pink-soft-rgb: 241, 221, 236;
+
+    --bs-progress-bg: #e9ecef;
+}
+
+[data-bs-theme="dark"] {
+    --bs-progress-bg: #343a40;
 }
 
 .py-10 {
@@ -19335,6 +19335,7 @@ fieldset:disabled .btn {
     transform-origin: bottom;
     transition: 0.2s ease-in-out;
 }
+
 .thumb:after {
     position: absolute;
     display: block;
