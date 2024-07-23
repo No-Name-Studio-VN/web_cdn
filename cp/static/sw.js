@@ -1,4 +1,4 @@
-const CACHE = "nnsvn-offline-v4";
+const CACHE = "nnsvn-offline-v5";
 
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
 

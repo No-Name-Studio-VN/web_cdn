@@ -18967,7 +18967,8 @@ fieldset:disabled .btn {
     display: none !important;
   }
 }
-:root, [data-bs-theme="light"] {
+:root,
+[data-bs-theme="light"] {
     --bs-red-rgb: 232, 21, 0;
     --bs-orange-rgb: 247, 100, 0;
     --bs-yellow-rgb: 244, 161, 0;
