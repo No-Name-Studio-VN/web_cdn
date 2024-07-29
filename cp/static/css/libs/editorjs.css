@@ -31,7 +31,11 @@
 }
 
 .cdx-checklist__item-checkbox-check {
-    background: var(--bs-body-bg) !important;
+    background: var(--bs-body-bg);
+}
+
+.cdx-checklist__item-checkbox svg {
+    transition: opacity 0.05s ease-in-out;
 }
 
 .ce-popover {
