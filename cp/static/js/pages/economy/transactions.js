@@ -1,7 +1,7 @@
 function formatContent(t,a,n){return`
     <div class="d-flex align-items-center">
         <span class="me-3">
-            <span class="p-2 bg-primary icon icon-md fs-7 rounded-4 ti ti-building-store"></span>
+            <span class="p-2 bg-primary icon icon-md fs-7 rounded-4 ti ti-building-store text-white"></span>
         </span>
         <div class="w-75 d-inline-block v-middle">
           <span class="mb-1 fw-semibold fs-4">${t.content}</span>
@@ -21,4 +21,4 @@ function formatContent(t,a,n){return`
                 </tr>
             </thead>
         </table>
-    </div>`);const n=$("#trans_table");function e(){window.ContentHandler.ToggleMultiSelect($(".bootstrap-table-filter-control-amount"),{placeholder:"Type"})}$.get("/economy/transactions/history",function(t){t=t.data;t.forEach(t=>{t.amount={amount:"withdraw"===t.type?"-"+t.amount:t.amount,type:t.type},t.main={content:t.content,source:t.source,timestamp:t.timestamp,currency:t.currency,location:t.location}}),n.bootstrapTable({...window.CustomBT_Config,cookieIdTable:"trans_table",toolbar:"#trans_toolbar",data:t}),e();let a=!1;n.on("toggle.bs.table",()=>{(a=!a)&&setTimeout(e,500)}),window.ContentHandler.toggleMainContent("#transactionsbox",!0)})})();
+    </div>`);const n=$("#trans_table");function e(){window.ContentHandler.ToggleMultiSelect($(".bootstrap-table-filter-control-amount"),{placeholder:"Type"})}$.get("/economy/transactions/history",function(t){t=t.data.map(t=>({...t,amount:{amount:"withdraw"===t.type?"-"+t.amount:t.amount,type:t.type},main:{content:t.content,source:t.source,timestamp:t.timestamp,currency:t.currency,location:t.location}}));n.bootstrapTable({...window.CustomBT_Config,cookieIdTable:"trans_table",toolbar:"#trans_toolbar",data:t}),e();let a=!1;n.on("toggle.bs.table",()=>{(a=!a)&&setTimeout(e,500)}),window.ContentHandler.ToggleMainContent("#transactionsbox",!0)})})();
