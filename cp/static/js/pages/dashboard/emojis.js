@@ -1,41 +1,26 @@
-(()=>{window.AnimationHandler.Add("HorizontalMove");let l=0;var e=window.location.pathname.split("/");const a=`/dashboard/${e[2]}/`+e[3],s=$("#accordion");function i(e){const{animated:t,id:i,name:n}=e;var o=!0===t?"gif":"png",e=`https://cdn.discordapp.com/emojis/${e.id}.`+o,e=`
-    <div class="col-lg-1 col-md-2 col-4 mb-3 emojis-items" emoji-id="${n}">
-      <div class="card card-hover overflow-hidden h-100">
-        <div class="el-card-item">
-          <div class="el-card-avatar el-overlay-1 w-100 overflow-hidden position-relative text-center">
-            <img src="${e}" class="d-block position-relative w-100" title="${n}" alt="${n}" filetype="${o}" loading="lazy">
-            <div class="el-overlay w-100 overflow-hidden">
-              <ul class="list-style-none el-info text-white text-uppercase d-inline-block p-0">
-                <li class="el-item d-inline-block my-0 mx-1">
-                  ${`
-    <a class="btn default btn-outline image-popup-vertical-fit el-link text-white border-white el-link text-white border-white" href="${e}" data-effect="mfp-move-horizontal">
-      <i class="ti ti-search"></i>
-    </a>
-    `}
-                </li>
-              </ul>
+(()=>{let m="emoji",w=(window.AnimationHandler.Add("HorizontalMove"),0);var e=window.location.pathname.split("/");let u=`/dashboard/${e[2]}/`+e[3],h=$("#cardholder"),t=$("#download_all"),g=$("#itemsCount");let i=async e=>{let{id:i,name:o,animated:t}=e,n=1==t?"gif":"png",a="https://media.discordapp.net/emojis/"+`${i}.${n}?quality=lossless`;r=a;var r,e=await new Promise((e,t)=>{let i=new Image;i.src=r,i.onload=()=>e({image:i,width:i.naturalWidth,height:i.naturalHeight}),i.onerror=t}),l=document.createDocumentFragment();let s=document.createElement("div");s.classList.add("col-lg-2","col-md-3","col-4","mb-3",m+"-items"),s.setAttribute(m+"-id",o),s.innerHTML=`
+    <div class="card card-hover overflow-hidden h-100">
+      <span class="d-none cardNameTag">${o}</span>
+      <div class="w-100 overflow-hidden position-relative text-center">
+        <a href="${a}" target="_blank" data-pswp-width="${e.width}" data-pswp-height="${e.height}">
+          <img src="${a}" class="d-block position-relative w-100" title="${o}" alt="${o}" filetype="${n}" loading="lazy" />
+        </a>
+      </div>
+
+      <div class="p-1">
+        <div class="w-100">
+          <div class="row g-1">
+            <div class="col-12">
+              <input type="text" class="form-control fw-semibold fs-2 ${m}-name-edit" value="${o}"></input>
             </div>
-          </div>
-          <div class="el-card-content p-1">
-            <div class="w-100">
-              <div class="row g-1">
-                <div class="col-12">
-                  <input type="text" class="form-control fw-semibold fs-2 emoji-name-edit" value="${n}"></input>
-                </div>
-                <div class="col-12">
-                  <div class="container-fluid p-0">
-                    <div class="row g-1">
-                      <div class="col-6">
-                        <button title="Download emoji" class="btn btn-primary btn-sm w-100 emoji-name-download" type="button" url="${e}" mediaType="${o}" fileName="${n}">
-                          <i class="ti ti-download"></i>
-                        </button>
-                      </div>
-                      <div class="col-6">
-                        <button title="Delete emoji" class="btn btn-danger btn-sm w-100 emoji-name-delete" type="button">
-                          <i class="ti ti-x"></i>
-                        </button>
-                      </div>
-                    </div>
+            <div class="col-12">
+              <div class="container-fluid p-0">
+                <div class="row g-1">
+                  <div class="col-6">
+                    <button title="Download" class="btn btn-primary btn-sm w-100 ${m}-name-download" type="button" url="${a}" mediaType="${n}" fileName="${o}"><i class="ti ti-download"></i></button>
+                  </div>
+                  <div class="col-6">
+                    <button title="Delete" class="btn btn-danger btn-sm w-100 ${m}-name-delete" type="button"><i class="ti ti-x"></i></button>
                   </div>
                 </div>
               </div>
@@ -44,4 +29,4 @@
         </div>
       </div>
     </div>
-    `,o=(s.append(e),s.find(`[emoji-id="${n}"] .emoji-name-edit`)),e=s.find(`[emoji-id="${n}"] .emoji-name-delete`);o.on("keydown",function(e){var t=$(this).val();"Enter"===e.key&&0<t.length&&t.length<33&&t!==n&&$.ajax({url:a+`/${i}/edit`,method:"POST",contentType:"application/json",data:JSON.stringify({id:i,name:t}),success:function(e){window.NotificationHandler.show({type:"success",content:e.data})},error:function(e){window.NotificationHandler.show({type:"error",content:e.responseJSON.error})}})}),e.on("click",function(){$.ajax({url:a+`/${i}/delete`,method:"POST",contentType:"application/json",success:function(e){window.NotificationHandler.show({type:"success",content:e.data}),s.find(`[emoji-id="${n}"]`).remove()},error:function(e){window.NotificationHandler.show({type:"error",content:e.responseJSON.error})}})})}$.get(a+"/fetch",function(e){var e=e.data,t=(s.empty(),0<e?.length&&e.forEach(e=>{l+=1,i(e)}),$(".image-popup-vertical-fit").magnificPopup({type:"image",closeOnContentClick:!0,mainClass:"mfp-img-mobile",image:{verticalFit:!0},gallery:{enabled:!0},title:function(){return this.st.el.attr("title")},removalDelay:500,callbacks:{beforeOpen:function(){this.st.image.markup=this.st.image.markup.replace("mfp-figure","mfp-figure mfp-with-anim"),this.st.mainClass=this.st.el.attr("data-effect")}},midClick:!0}),$("#emojis_count").text(l),$("#searchemojis"));window.ContentHandler.SearchNoResult(s),window.ContentHandler.PreventSubmitOnEnter(t),t.on("keyup change",function(){var e=$(this).val().toLowerCase();const t=new RegExp(e,"i");s.find(".no-result").hide(),0===s.find(".emojis-items").hide().filter(function(){return!$(this).hasClass("no-result")&&t.test($(this).find(".emoji-name-edit").val().toLowerCase())}).show().length?s.find(".no-result").show():""===e&&s.find(".emojis-items").show()}),0==e?.length&&s.find(".no-result").show()}),$(document).on("click",".emoji-name-download",function(){d();var e=$(this).attr("url"),t=$(this).attr("fileName");$(this).attr("mediaType");{var n=t;const o=new XMLHttpRequest;o.open("GET",e,!0),o.responseType="blob",o.onload=function(e){var t=o.response,i=document.createElement("a"),t=window.URL.createObjectURL(t);i.href=t,i.download=n,i.click(),window.URL.revokeObjectURL(t)},o.send(),r()}}),$(document).on("click","#download_all",async function(){d(),$("#download_all").attr("disabled",!0),$("#download_all").html('<span class="spinner-border spinner-border-sm" role="status"></span>'),"function"!=typeof JSZip&&await LoadHandler.js(client.cdn+"/static/libs/jszip/index.min.js");const o=new JSZip;let a=0;$(".emoji-name-download").each(function(){var e=$(this),t=e.attr("url");const i=e.attr("fileName")+"."+e.attr("mediaType"),n=new XMLHttpRequest;n.open("GET",t,!0),n.responseType="blob",n.onload=e=>{var t;200==n.status&&(t=n.response,o.file(i,t),++a==l)&&o.generateAsync({type:"blob"}).then(e=>{r();const t=$("#download_all");function i(){saveAs(e,"emojis.zip"),t.html('<i class="ti ti-check"></i> Done'),setTimeout(()=>{t.html('<i class="ti ti-download"></i> Download All'),t.attr("disabled",!1)},2e3)}"function"!=typeof saveAs?LoadHandler.js(client.cdn+"/static/libs/filesaver/index.js").then(()=>{i()}):i()})},n.send()})});e=$("#multiplefileupload");function d(){window.NotificationHandler.show({type:"info",content:"Generating your emojis..."})}function r(){window.NotificationHandler.show({type:"success",content:"Your emojis are ready to be claimed!"})}e.fileinput({language:getLang(),showPreview:!0,showUpload:!0,browseOnZoneClick:!0,layoutTemplates:{footer:'<div class="file-thumbnail-footer" style ="height:94px">\n  <input class="kv-input kv-new form-control input-sm form-control-sm text-center {TAG_CSS_NEW} file-name" value="{caption}" placeholder="Enter file name...">\n   <div class="small" style="margin:15px 0 2px 0">{size}</div> {progress}\n{indicator}\n{actions}\n</div>'},maxFileSize:262144,elErrorContainer:"#kartik-file-errors",allowedFileExtensions:["jpg","png","gif"],uploadUrl:a+"/upload",uploadExtraData:function(){return{name:$(".kv-input:visible.file-name").val()}}}),e.on("fileloaded",function(e,t,i,n,o,a){$(".kv-input:visible.file-name").val(function(e){(e=(e=e.replace(/\.[^/.]+$/,"")).replace(/[^a-zA-Z0-9_]/g,"")).length<2&&(e="emj");32<e.length&&(e=e.slice(0,32));return e}(t.name))}),e.on("fileuploaded",function(e,t){t=t.response;t.success&&i(t.data)})})();
+    `,l.appendChild(s);var e=s.querySelector(`.${m}-name-download`),d=s.querySelector(`.${m}-name-delete`);let c=s.querySelector(`.${m}-name-edit`),p=s.querySelector(".cardNameTag");rxjs.fromEvent(e,"click").subscribe(e=>{v(),(async(e,t)=>{try{var i=await fetch(e);if(!i.ok)throw new Error("Network response was not ok");var o=await i.blob(),n=document.createElement("a"),a=window.URL.createObjectURL(o);n.href=a,n.download=t,document.body.appendChild(n),n.click(),document.body.removeChild(n),window.URL.revokeObjectURL(a),f()}catch(e){logger.error("There was a problem with the fetch operation:",e)}})(a,o,n)}),rxjs.fromEvent(d,"click").subscribe(e=>{$.ajax({url:u+`/${i}/delete`,method:"POST",contentType:"application/json",success:function(e){s.remove(),w--,g.text(w),window.NotificationHandler.show({type:"success",content:e.data})},error:function(e){window.NotificationHandler.show({type:"error",content:e.responseJSON.error})}})}),rxjs.fromEvent(c,"keydown").subscribe(e=>{if("Enter"===e.key){let t=c.value;0<t.length&&t.length<33&&t!==o&&$.ajax({url:u+`/${i}/edit`,method:"POST",contentType:"application/json",data:JSON.stringify({id:i,name:t}),success:function(e){window.NotificationHandler.show({type:"success",content:e.data}),p.textContent=t},error:function(e){window.NotificationHandler.show({type:"error",content:e.responseJSON.error})}})}}),h.prepend(l)};$.get(u+"/fetch",function({data:e}){if(h.empty(),0<e?.length){w=e.length;for(var t of e)i(t)}let n=new PhotoSwipeLightbox({gallery:"#cardholder",children:"a",initialZoomLevel:"fit",secondaryZoomLevel:5,maxZoomLevel:10,pswpModule:PhotoSwipe});n.on("uiRegister",function(){n.pswp.ui.registerElement({name:"zoom-level-indicator",order:9,onInit:(t,i)=>{i.on("zoomPanUpdate",e=>{e.slide===i.currSlide&&(t.innerText="Zoom level is "+Math.round(100*i.currSlide.currZoomLevel)+"%")})}}),n.pswp.ui.registerElement({name:"custom-caption",order:9,isButton:!1,appendTo:"root",html:"Caption text",onInit:(o,e)=>{n.pswp.on("change",()=>{var e,t=n.pswp.currSlide.data.element;let i="";t&&(e=t.querySelector(".hidden-caption-content"),i=e?e.innerHTML:t.querySelector("img").getAttribute("alt")),o.innerHTML=i||""})}})}),n.init(),g.text(w)});e=$("#multiplefileupload");function v(){window.NotificationHandler.show({type:"info",content:i18next.t("dashboard.pages.stickers_emojis.download.generating",{type:i18next.t("dashboard.pages.sticker.title")})})}function f(){window.NotificationHandler.show({type:"success",content:i18next.t("dashboard.pages.stickers_emojis.download.completed",{type:i18next.t("dashboard.pages.sticker.title")})})}e.fileinput({language:getLang(),showPreview:!0,showUpload:!0,browseOnZoneClick:!0,layoutTemplates:{footer:'<div class="file-thumbnail-footer" style ="height:94px">\n  <input class="kv-input kv-new form-control input-sm form-control-sm text-center {TAG_CSS_NEW} file-name" value="{caption}" placeholder="Enter file name...">\n   <div class="small" style="margin:15px 0 2px 0">{size}</div> {progress}\n{indicator}\n{actions}\n</div>'},maxFileSize:256,elErrorContainer:"#kartik-file-errors",allowedFileExtensions:["jpg","jpeg","png","gif"],uploadUrl:u+"/upload",uploadExtraData:function(){return{name:$(".kv-input:visible.file-name").val()}}}),e.on("fileloaded",function(e,t,i,o,n,a){$(".kv-input:visible.file-name").val((t=(t=t.name).replace(/\.[^/.]+$/,"").replace(/[^a-zA-Z0-9_]/g,"")).length<2?m:t.slice(0,32))}),e.on("fileuploaded",function(e,t){t=t.response;t.success&&i(t.data)}),rxjs.fromEvent(t,"click").pipe(rxjs.tap(()=>window.ContentHandler.ToggleLoading(t,!0)),rxjs.debounceTime(1e3),rxjs.switchMap(async()=>{"function"!=typeof JSZip&&await LoadHandler.js(client.cdn+"/static/libs/jszip/index.min.js");let i=new JSZip;var e=document.querySelectorAll(`.${m}-name-download`);0!==e.length&&(v(),e=Array.from(e).map(async e=>{var t=e.getAttribute("url"),e=e.getAttribute("fileName")+"."+e.getAttribute("mediaType"),t=await fetch(t);t.ok&&(t=await t.blob(),i.file(e,t))}),await Promise.all(e),e=await i.generateAsync({type:"blob"}),f(),"function"!=typeof saveAs&&await LoadHandler.js(client.cdn+"/static/libs/filesaver/index.js"),saveAs(e,m+".zip"))}),rxjs.catchError(e=>(logger.error("Error downloading "+m,e),window.NotificationHandler.show({title:i18next.t("dashboard.pages.stickers_emojis.download.error.title",{type:i18next.t("dashboard.pages.sticker.title")}),content:e.message,type:"error"}),[])),rxjs.tap(()=>window.ContentHandler.ToggleLoading(t,!1))).subscribe()})();

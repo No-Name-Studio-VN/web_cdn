@@ -15,7 +15,7 @@
  * https://web.dev/service-worker-lifecycle/#avoid-url-change.
  */
 
-const CACHE = "nnsvn-offline-v6";
+const CACHE = "nnsvn-offline-v7";
 
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
 

@@ -1,4 +1,4 @@
-(()=>{const a=$("#verify_state");$.ajax({url:window.location.pathname+"/data",method:"GET",contentType:"application/json",success:function(t){var t=t.data,e=0<Object.keys(t).length;if(a.removeClass("bg-primary").addClass(e?"bg-success":"bg-danger").html('<i class="ti ti-'+(e?"check":"x")+' text-white fs-7"></i>'),t?.metadata){const s=$("#metadata_holder");t.metadata.forEach(t=>{s.append(`
+(()=>{let s=$("#verify_state");$.ajax({url:window.location.pathname+"/data",method:"GET",contentType:"application/json",success:function(t){var t=t.data,e=0<Object.keys(t).length;if(s.removeClass("bg-primary").addClass(e?"bg-success":"bg-danger").html('<i class="ti ti-'+(e?"check":"x")+' text-white fs-7"></i>'),t?.metadata){let e=$("#metadata_holder");t.metadata.forEach(t=>{e.append(`
             <div class="row">
               <div class="col-12">
                 <div class="d-flex align-items-center justify-content-between">
