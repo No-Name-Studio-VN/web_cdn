@@ -1,9 +1,0 @@
-(()=>{let n=document.getElementById("notificationHolder");if(n.innerHTML="",0==document.querySelectorAll(".headerNotification").length)n.innerHTML='<div class="d-flex justify-content-center p-5"><div class="text-center text-muted-dark py-3" id="noNotificationBox">Woa, there is nothing here now.</div></div>';var e=window.NotificationHandler.get();if(e)for(let t=0;t<e.length;t++)(e=>{if(!e||!e.content)return console.error("No content provided");e.title||(e.title="Notification");let i=document.createElement("a");i.classList.add("py-6","px-3","rounded-3","d-flex","align-items-center","bg-hover-light-black","headerNotification"),i.setAttribute("href","javascript:void(0)");var t=e.avatar??client.cdn+"/static/svg/icons/inbox.svg";i.innerHTML=`
-        <div class="bg-primary rounded-1 me-3 p-6 d-flex align-items-center justify-content-center">
-          <img src="${t}" alt="" class="img-fluid" width="24" height="24">
-        </div>
-        <div class="w-75 d-inline-block v-middle">
-          <h6 class="mb-1 fw-semibold" nns-markdown>${e.content}</h6>
-          <span class="d-block text-body-color">${bt_dateformatter(e.timestamp)}</span>
-        </div>
-        `,document.getElementById("noNotificationBox")?.remove(),((t=n.querySelector(".simplebar-content"))||n).prepend(i),newNotificationIndicator.style.visibility="visible",i.addEventListener("click",function(){i.addEventListener("click",function(){i.remove();let t=JSON.parse(localStorage.getItem("notificationData"));t&&(t=t.filter(function(t){return t.id!==e.id}),localStorage.setItem("notificationData",JSON.stringify(t)),window.NotificationHandler.checkIfEmpty())})})})(e[t])})();

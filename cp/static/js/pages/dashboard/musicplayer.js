@@ -1,1 +1,0 @@
-$(document).ready(function(){document.querySelectorAll("iframe").forEach(e=>{$(e).on("load",function(){$("#"+$(e).attr("videoid")).remove(),$(e).css("display","")})})});

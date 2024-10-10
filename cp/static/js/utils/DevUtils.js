@@ -1,1 +1,0 @@
-(e=>{let l=[];e.DevUtils={disableAllCSS:()=>{Array.from(document.getElementsByTagName("link")).forEach(e=>{"stylesheet"===e.rel&&(l.push(e),e.disabled=!0)}),Array.from(document.getElementsByTagName("style")).forEach(e=>{l.push(e),e.disabled=!0})},enableAllCSS:()=>{l.forEach(e=>{e.disabled=!1}),l=[]}}})(window);
