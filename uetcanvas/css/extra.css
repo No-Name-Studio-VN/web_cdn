@@ -1,0 +1,13 @@
+.card-hover {
+    transition: .2s ease-in
+}
+
+.card-hover:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 0.5rem 2rem 0 rgba(33, 40, 50, 0.25);
+}
+
+.card-hover:active {
+    transform: translateY(0.15rem);
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(33, 40, 50, 0.15);
+}
