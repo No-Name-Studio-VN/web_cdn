@@ -1,0 +1,205 @@
+:root {
+    --bg-color: background-color: #7f5a83;
+    --menu-color: #00000045;
+    --lyrics-color: white;
+}
+
+#album-art {
+    position: fixed;
+    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.15;
+    width: auto;
+    height: 100%;
+}
+
+
+.video-wrap {
+    z-index: -100;
+}
+
+.custom-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.artist-name {
+    color: var(--bs-secondary-color);
+}
+
+@media only screen and (max-width: 340px) {
+    #menu>button {
+        font-size: 5vw !important;
+        padding: 4px 6px !important;
+    }
+
+    #progress-bar {
+        width: 50% !important;
+    }
+}
+
+#lyrics {
+    width: 100%;
+    height: 50vh;
+    color: var(--lyrics-color);
+    text-align: center;
+    overflow-Y: scroll;
+    font-size: 2vh;
+}
+
+#lyrics-content {
+    margin: 0;
+    transition: ease 0.1s all;
+}
+
+#lyrics-content h2 {
+    opacity: 0.25;
+    text-wrap: balance;
+    transition: opacity 0.15s ease-in-out;
+}
+
+#lyrics-content h2:hover {
+    opacity: 0.75!important;
+    cursor: pointer;
+}
+
+#lyrics-content .current {
+    opacity: 1!important;
+    font-size: 275%;
+    transform: translateY(15%);
+    padding-bottom: 1.5rem !important;
+    transition: opacity 0.25s ease-in-out;
+}
+
+#lyrics-content .current+h2 {
+    opacity: 0.5;
+    font-size: 180%;
+}
+
+#player {
+    background: var(--menu-color);
+    position: relative;
+    bottom: 0;
+    height: 24vh;
+    width: 100%;
+    z-index: 50;
+}
+
+#bar {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    padding-top: 25px;
+}
+
+#currentTime,
+#totalTime {
+    transform: translateY(-50%);
+    padding: 0 2%;
+    font-size: 3vh
+}
+
+@media only screen and (min-height: 500px) {
+
+    #currentTime,
+    #totalTime {
+        font-size: 2.25vh !important;
+    }
+}
+
+#currentTime,
+#progress-bar,
+#totalTime {
+    color: var(--bs-body-color);
+    display: inline-block;
+}
+
+#progress-bar {
+    position: relative;
+    text-align: center;
+    height: 0.25em;
+    width: 70%;
+    border: 0;
+    border-color: transparent!important;
+    background: var(--bs-secondary-bg);
+    border-radius: 20px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    transform: translateY(-160%);
+}
+
+#progress {
+    height: 100%;
+    width: 0%;
+    background: rgba(var(--bs-primary-rgb), 1) !important;
+    border-radius: 20px;
+    text-align: right;
+    transition: ease all;
+}
+
+#progress>i {
+    position: absolute;
+    transform: translate(-50%, -35%);
+}
+
+#menu {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+#menu>button {
+    padding: 10px 12px;
+    border-radius: 50%;
+    border: none;
+    margin: 0 5px;
+    background: inherit;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    opacity: 0.75;
+    cursor: pointer;
+}
+
+#menu>button>i {
+    padding: 5px 3px 5px 5px;
+}
+
+#menu>button#play {
+    opacity: 1;
+    border: 2px solid white;
+}
+
+#menu>button:focus {
+    outline: none;
+}
+
+.floating-icon {
+    position: absolute;
+    bottom: 5%;
+    z-index: 1000;
+    font-size: 4vh;
+    border: 1.5px solid white;
+    border-radius: 50%;
+    padding: 1vh 2vh;
+    background: #222;
+}
+
+.floating-icon:nth-child(1) {
+    right: 3vh;
+}
+
+.floating-icon:nth-child(2) {
+    right: 12vh;
+}
+
+.jp-volume-bar {
+    min-width: 40vw;
+}
