@@ -1,32 +1,19 @@
-const fileList = $("#fileList");
-
-const formatFileSize = (bytes) => {
-  if (bytes === 0) return "0 Bytes";
-  const k = 1024;
-  const sizes = ["Bytes", "KB", "MB", "GB", "TB"];
-  const i = Math.floor(Math.log(bytes) / Math.log(k));
-  return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i];
-};
-
-function createFileElement(file) {
-  const { fileTitle, fileType, uploadedAt, _id, fileSize } = file;
-  const previewUrl = "/files/file/" + _id;
-  const templateHtml = `
+let fileList=$("#fileList"),formatFileSize=e=>{var t;return 0===e?"0 Bytes":(t=Math.floor(Math.log(e)/Math.log(1024)),parseFloat((e/Math.pow(1024,t)).toFixed(2))+" "+["Bytes","KB","MB","GB","TB"][t])};function createFileElement(e){let{fileTitle:t,fileType:i,uploadedAt:a,_id:s,fileSize:l}=e,n="/files/file/"+s;var e=`
     <li class="list-group-item">
         <div class="row align-items-center py-3">
           <div class="col-auto">
             <span class="position-relative">
-              <img width="40" height="40" src="${FILE_ICONS[fileType]}" />
+              <img width="40" height="40" src="${FILE_ICONS[i]}" />
             </span>
           </div>
 
           <div class="col">
             <h5 class="mb-0">
-              <a href="${previewUrl}">${fileTitle}</a>
+              <a href="${n}">${t}</a>
             </h5>
             <ul class="list-inline list-separator small text-body">
-              <li class="list-inline-item">${moment(uploadedAt).fromNow()}</li>
-              <li class="list-inline-item">${formatFileSize(fileSize)}</li>
+              <li class="list-inline-item">${moment(a).fromNow()}</li>
+              <li class="list-inline-item">${formatFileSize(l)}</li>
             </ul>
           </div>
 
@@ -46,57 +33,4 @@ function createFileElement(file) {
             </div>
           </div>
         </div>
-      </li>`;
-
-  const div = document.createElement("template");
-  div.innerHTML = templateHtml.trim();
-  
-  // Get the actual element from the template
-  const element = div.content.firstElementChild;
-  
-  // Now query the actual element
-  const shareButton = element.querySelector(".share");
-  const downloadButton = element.querySelector(".down");
-  const deleteButton = element.querySelector(".delete");
-
-  shareButton.addEventListener("click", () => {
-    window.ContentHandler.Share(previewUrl);
-  });
-
-  downloadButton.addEventListener("click", () => {
-    window.location.href = previewUrl;
-  });
-
-
-  deleteButton.addEventListener("click", async () => {
-    try {
-      const prompt = window.confirm("Bạn có chắc chắn muốn xóa tệp tin này không?");
-      if (!prompt) return;
-      const { success } = await $.post(`/api/files/${_id}/delete`);
-      if (success) {
-        element.remove();
-      } else {
-        window.NotificationHandler.show({
-          content: "Không thể xóa tệp tin này.",
-          type: "error"
-        });
-      }
-    } catch (error) {
-      window.NotificationHandler.show({
-        content: "Không thể xóa tệp tin này.",
-        type: "error"
-      });
-    }
-  });
-
-  fileList.append(element);
-}
-
-(async () => {
-  const { data } = await $.get("/api/users/@me/files");
-  if (data) {
-    data.forEach(element => createFileElement(element));
-  } else {
-    fileList.append("<li class='list-group-item'>Không có tệp tin nào.</li>");
-  }
-})();
+      </li>`,o=document.createElement("template");o.innerHTML=e.trim();let d=o.content.firstElementChild;var e=d.querySelector(".share"),o=d.querySelector(".down"),r=d.querySelector(".delete");e.addEventListener("click",()=>{window.ContentHandler.Share(n)}),o.addEventListener("click",()=>{window.location.href=n}),r.addEventListener("click",async()=>{try{var e;window.confirm("Bạn có chắc chắn muốn xóa tệp tin này không?")&&(e=(await $.post(`/api/files/${s}/delete`)).success,e?d.remove():window.NotificationHandler.show({content:"Không thể xóa tệp tin này.",type:"error"}))}catch(e){window.NotificationHandler.show({content:"Không thể xóa tệp tin này.",type:"error"})}}),fileList.append(d)}(async()=>{var e=(await $.get("/api/users/@me/files")).data;e?e.forEach(e=>createFileElement(e)):fileList.append("<li class='list-group-item'>Không có tệp tin nào.</li>")})();

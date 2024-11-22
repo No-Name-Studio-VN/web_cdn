@@ -1,5 +1,4 @@
-(() => {
-    InjectCSS(`
+InjectCSS(`
     .wizard {
       display: block;
       width: 100%;
@@ -799,5 +798,4 @@
     }
     [data-bs-theme=dark] .wizard-content .wizard > .steps .step {
       border: 3px solid #333f55 !important;
-    }`)
-})()
+    }`);

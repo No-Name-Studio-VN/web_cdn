@@ -1,12 +1,4 @@
-// eslint-disable-next-line no-unused-vars
-const calendarsEvents = {
-    Danger: "danger",
-    Success: "success",
-    Primary: "primary",
-    Warning: "warning",
-};
-
-InjectCSS(`
+let calendarsEvents={Danger:"danger",Success:"success",Primary:"primary",Warning:"warning"};InjectCSS(`
 .calendar-container {
     padding: 30px 30px;
     background-color: var(--bs-primary);

@@ -1,6 +1,4 @@
-(() => {
-
-    InjectCSS(`
+InjectCSS(`
     .shepherd-element {
         background: var(--bs-body-bg);
     }
@@ -18,4 +16,3 @@
         font-weight: 600;
     }
     `);
-})();

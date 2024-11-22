@@ -1,256 +1,52 @@
-const FormBuilder = {
-    buildAttributes: (config) => {
-        const attrs = [];
-        const {
-            id, name = id,
-            required = false,
-            disabled = false,
-            readonly = false,
-            pattern,
-            minlength,
-            maxlength,
-            min,
-            max,
-            step,
-            placeholder,
-            value = '',
-            dataset = {},
-            attributes = {}
-        } = config;
-
-        // Base attributes
-        attrs.push(`id="${id}"`);
-        attrs.push(`name="${name}"`);
-        if (placeholder) attrs.push(`placeholder="${placeholder}"`);
-        if (value) attrs.push(`value="${value}"`);
-        
-        // Boolean attributes
-        if (required) attrs.push('required');
-        if (disabled) attrs.push('disabled');
-        if (readonly) attrs.push('readonly');
-
-        // Validation attributes
-        if (pattern) attrs.push(`pattern="${pattern}"`);
-        if (minlength) attrs.push(`minlength="${minlength}"`);
-        if (maxlength) attrs.push(`maxlength="${maxlength}"`);
-        if (min) attrs.push(`min="${min}"`);
-        if (max) attrs.push(`max="${max}"`);
-        if (step) attrs.push(`step="${step}"`);
-
-        // Data attributes
-        Object.entries(dataset).forEach(([key, value]) => {
-            attrs.push(`data-${key}="${value}"`);
-        });
-
-        // Custom attributes
-        Object.entries(attributes).forEach(([key, value]) => {
-            attrs.push(`${key}="${value}"`);
-        });
-
-        return attrs.join(' ');
-    },
-
-    baseInput: (config) => {
-        const { 
-            type = 'text',
-            label,
-            colSize = 9,
-            classes = ['form-control'],
-            wrapperClasses = ['row', 'mb-4']
-        } = config;
-
-        return `
-            <div class="${wrapperClasses.join(' ')}">
-                <label for="${config.id}" class="col-sm-3 col-form-label form-label">${label}</label>
-                <div class="col-sm-${colSize}">
-                    <input type="${type}" 
-                           class="${classes.join(' ')}"
-                           ${FormBuilder.buildAttributes(config)}>
+let FormBuilder={buildAttributes:e=>{let a=[];var{id:e,name:l=e,required:r=!1,disabled:t=!1,readonly:i=!1,pattern:s,minlength:o,maxlength:u,min:n,max:c,step:d,placeholder:p,value:m="",dataset:b={},attributes:h={}}=e;return a.push(`id="${e}"`),a.push(`name="${l}"`),p&&a.push(`placeholder="${p}"`),m&&a.push(`value="${m}"`),r&&a.push("required"),t&&a.push("disabled"),i&&a.push("readonly"),s&&a.push(`pattern="${s}"`),o&&a.push(`minlength="${o}"`),u&&a.push(`maxlength="${u}"`),n&&a.push(`min="${n}"`),c&&a.push(`max="${c}"`),d&&a.push(`step="${d}"`),Object.entries(b).forEach(([e,l])=>{a.push(`data-${e}="${l}"`)}),Object.entries(h).forEach(([e,l])=>{a.push(e+`="${l}"`)}),a.join(" ")},baseInput:e=>{var{type:l="text",label:a,colSize:r=9,classes:t=["form-control"],wrapperClasses:i=["row","mb-4"]}=e;return`
+            <div class="${i.join(" ")}">
+                <label for="${e.id}" class="col-sm-3 col-form-label form-label">${a}</label>
+                <div class="col-sm-${r}">
+                    <input type="${l}" 
+                           class="${t.join(" ")}"
+                           ${FormBuilder.buildAttributes(e)}>
                 </div>
-            </div>`;
-    },
-
-    // Replace existing input methods with simplified versions using baseInput
-    textInput: (config) => FormBuilder.baseInput({ ...config, type: 'text' }),
-    emailInput: (config) => FormBuilder.baseInput({ ...config, type: 'email' }),
-    phoneInput: (config) => FormBuilder.baseInput({ ...config, type: 'tel' }),
-    numberInput: (config) => FormBuilder.baseInput({ ...config, type: 'number' }),
-
-    selectInput: (config) => {
-        const { 
-            id, 
-            label, 
-            options = [], 
-            colSize = 9,
-            classes = ['form-select'],
-            wrapperClasses = ['row', 'mb-4']
-        } = config;
-
-        const optionsHtml = options.map(opt =>
-            `<option value="${opt.value}" ${opt.value === config.value ? 'selected' : ''}>${opt.label}</option>`
-        ).join('');
-
-        return `
-            <div class="${wrapperClasses.join(' ')}">
-                <label for="${id}" class="col-sm-3 col-form-label form-label">${label}</label>
-                <div class="col-sm-${colSize}">
-                    <select class="${classes.join(' ')}" ${FormBuilder.buildAttributes(config)}>
-                        <option>${config.placeholder || 'Chọn một lựa chọn'}</option>
-                        ${optionsHtml}
+            </div>`},textInput:e=>FormBuilder.baseInput({...e,type:"text"}),emailInput:e=>FormBuilder.baseInput({...e,type:"email"}),phoneInput:e=>FormBuilder.baseInput({...e,type:"tel"}),numberInput:e=>FormBuilder.baseInput({...e,type:"number"}),selectInput:l=>{var{id:e,label:a,options:r=[],colSize:t=9,classes:i=["form-select"],wrapperClasses:s=["row","mb-4"]}=l,r=r.map(e=>`<option value="${e.value}" ${e.value===l.value?"selected":""}>${e.label}</option>`).join("");return`
+            <div class="${s.join(" ")}">
+                <label for="${e}" class="col-sm-3 col-form-label form-label">${a}</label>
+                <div class="col-sm-${t}">
+                    <select class="${i.join(" ")}" ${FormBuilder.buildAttributes(l)}>
+                        <option>${l.placeholder||"Chọn một lựa chọn"}</option>
+                        ${r}
                     </select>
                 </div>
-            </div>`;
-    },
-
-    radioGroup: (config) => {
-        const { id, label, options = [], value = '' } = config;
-        const optionsHtml = options.map(opt => `
-            <label class="form-control" for="${id}_${opt.value}">
+            </div>`},radioGroup:e=>{let{id:l,label:a,options:r=[],value:t=""}=e;return`
+            <div class="row mb-4">
+                <label class="col-sm-3 col-form-label form-label">${a}</label>
+                <div class="col-sm-9">
+                    <div class="input-group input-group-sm-vertical">
+                        ${r.map(e=>`
+            <label class="form-control" for="${l}_${e.value}">
                 <span class="form-check">
                     <input type="radio" 
                            class="form-check-input" 
-                           name="${id}" 
-                           id="${id}_${opt.value}"
-                           value="${opt.value}"
-                           ${opt.value === value ? 'checked' : ''}>
-                    <span class="form-check-label">${opt.label}</span>
+                           name="${l}" 
+                           id="${l}_${e.value}"
+                           value="${e.value}"
+                           ${e.value===t?"checked":""}>
+                    <span class="form-check-label">${e.label}</span>
                 </span>
             </label>
-        `).join('');
-
-        return `
-            <div class="row mb-4">
-                <label class="col-sm-3 col-form-label form-label">${label}</label>
-                <div class="col-sm-9">
-                    <div class="input-group input-group-sm-vertical">
-                        ${optionsHtml}
+        `).join("")}
                     </div>
                 </div>
-            </div>`;
-    },
-
-    checkbox: (config) => {
-        const { id, label, description, checked = false, required = false } = config;
-        return `
+            </div>`},checkbox:e=>{var{id:e,label:l,description:a,checked:r=!1,required:t=!1}=e;return`
             <div class="row align-items-center mb-4">
-                <label class="col-sm-3 col-form-label form-label">${label}</label>
+                <label class="col-sm-3 col-form-label form-label">${l}</label>
                 <div class="col-sm-9">
                     <div class="form-check">
                         <input class="form-check-input" 
                                type="checkbox" 
                                value="" 
-                               id="${id}"
-                               name="${id}"
-                               ${checked ? 'checked' : ''} ${required ? 'required' : ''}>
-                        <label class="form-check-label" for="${id}">${description}</label>
+                               id="${e}"
+                               name="${e}"
+                               ${r?"checked":""} ${t?"required":""}>
+                        <label class="form-check-label" for="${e}">${a}</label>
                     </div>
                 </div>
-            </div>`;
-    }
-};
-
-// Example usage with enhanced attributes
-(() => {
-    const formContainer = document.getElementById('formcontent');
-    if (!formContainer) return;
-
-    $.get("/api/users/@me", function (res) {
-        const { data } = res;
-        if (data) {
-
-            if (data.profilePicture) $('#profilePicture').attr('src', data.profilePicture);
-
-            const formContent = [
-                FormBuilder.textInput({
-                    id: 'displayName',
-                    label: 'Họ và tên',
-                    required: true,
-                    value: data.displayName || '',
-                    minlength: 2,
-                    maxlength: 50,
-                    dataset: {
-                        validate: 'name',
-                        test: 'value'
-                    },
-                    attributes: {
-                        autocomplete: 'name'
-                    }
-                }),
-                FormBuilder.emailInput({
-                    id: 'email',
-                    label: 'Email',
-                    required: true,
-                    value: data.email || '',
-                    dataset: {
-                        validate: 'email'
-                    },
-                    readonly: true
-                }),
-                FormBuilder.phoneInput({
-                    id: 'phoneNumber',
-                    label: 'Số điện thoại',
-                    placeholder: '+x(xxx)xxx-xx-xx',
-                    value: data.phoneNumber || '',
-                }),
-                FormBuilder.numberInput({
-                    id: 'studentId',
-                    label: 'Mã số sinh viên',
-                    placeholder: 'MSSV của bạn',
-                    value: data.studentId || '',
-                    required: true,
-                }),
-                FormBuilder.selectInput({
-                    id: 'schoolYear',
-                    label: 'Khóa',
-                    placeholder: 'Chọn khóa',
-                    options: [
-                        { value: 'QH-2019', label: 'QH-2019' },
-                        { value: 'QH-2020', label: 'QH-2020' },
-                        { value: 'QH-2021', label: 'QH-2021' },
-                        { value: 'QH-2022', label: 'QH-2022' },
-                        { value: 'QH-2023', label: 'QH-2023' },
-                        { value: 'QH-2024', label: 'QH-2024' },
-                        { value: 'QH-2025', label: 'QH-2025' },
-                    ],
-                    value: data.schoolYear || '',
-                    required: true,
-                }),
-                FormBuilder.selectInput({
-                    id: 'department',
-                    label: 'Khoa',
-                    placeholder: 'Chọn khoa',
-                    options: window.ULISconstant.departments.map(department => ({ value: department, label: department })),
-                    value: data.department || '',
-                    required: true,
-                }),
-                FormBuilder.textInput({
-                    id: 'course',
-                    label: 'Ngành học',
-                    placeholder: 'Ngành học của bạn',
-                    required: true,
-                    value: data.course || ''
-                }),
-                FormBuilder.textInput({
-                    id: 'class',
-                    label: 'Lớp học',
-                    placeholder: 'Lớp học của bạn',
-                    required: true,
-                    value: data.class || ''
-                }),
-                FormBuilder.radioGroup({
-                    id: 'accountType',
-                    label: 'Loại tài khoản',
-                    options: [
-                        { value: 'student', label: 'Học sinh' },
-                        { value: 'teacher', label: 'Giáo viên' }
-                    ],
-                    value: 'student'
-                }),
-            ];
-
-            formContainer.innerHTML = formContent.join('');
-
-            FormHandler.InitializeFormWatcher();
-        }
-    });
-})();
+            </div>`}};(()=>{let l=document.getElementById("formcontent");l&&$.get("/api/users/@me",function(e){var e=e.data;e&&(e.profilePicture&&$("#profilePicture").attr("src",e.profilePicture),e=[FormBuilder.textInput({id:"displayName",label:"Họ và tên",required:!0,value:e.displayName||"",minlength:2,maxlength:50,dataset:{validate:"name",test:"value"},attributes:{autocomplete:"name"}}),FormBuilder.emailInput({id:"email",label:"Email",required:!0,value:e.email||"",dataset:{validate:"email"},readonly:!0}),FormBuilder.phoneInput({id:"phoneNumber",label:"Số điện thoại",placeholder:"+x(xxx)xxx-xx-xx",value:e.phoneNumber||""}),FormBuilder.numberInput({id:"studentId",label:"Mã số sinh viên",placeholder:"MSSV của bạn",value:e.studentId||"",required:!0}),FormBuilder.selectInput({id:"schoolYear",label:"Khóa",placeholder:"Chọn khóa",options:[{value:"QH-2019",label:"QH-2019"},{value:"QH-2020",label:"QH-2020"},{value:"QH-2021",label:"QH-2021"},{value:"QH-2022",label:"QH-2022"},{value:"QH-2023",label:"QH-2023"},{value:"QH-2024",label:"QH-2024"},{value:"QH-2025",label:"QH-2025"}],value:e.schoolYear||"",required:!0}),FormBuilder.selectInput({id:"department",label:"Khoa",placeholder:"Chọn khoa",options:window.ULISconstant.departments.map(e=>({value:e,label:e})),value:e.department||"",required:!0}),FormBuilder.textInput({id:"course",label:"Ngành học",placeholder:"Ngành học của bạn",required:!0,value:e.course||""}),FormBuilder.textInput({id:"class",label:"Lớp học",placeholder:"Lớp học của bạn",required:!0,value:e.class||""}),FormBuilder.radioGroup({id:"accountType",label:"Loại tài khoản",options:[{value:"student",label:"Học sinh"},{value:"teacher",label:"Giáo viên"}],value:"student"})],l.innerHTML=e.join(""),FormHandler.InitializeFormWatcher())})})();
