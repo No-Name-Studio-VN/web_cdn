@@ -11596,7 +11596,7 @@ fieldset:disabled .btn {
 
 .text-break {
   word-wrap: break-word !important;
-  word-break: break-word !important;
+  word-break: auto-phrase !important;
   white-space: break-spaces !important;
 }
 

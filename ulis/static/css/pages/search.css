@@ -362,7 +362,8 @@ a:hover {
     color: #fff
 }
 
-.list-separator-light .list-separator-link,.list-separator-light .list-separator-link:hover {
+.list-separator-light .list-separator-link,
+.list-separator-light .list-separator-link:hover {
     color: #fff
 }
 
@@ -385,4 +386,14 @@ a:hover {
     --bs-dropdown-item-padding-x: 1rem;
     --bs-dropdown-item-padding-y: 0.5rem;
     --bs-dropdown-item-border-radius: .3125rem;
+}
+
+.text-cap {
+    display: block;
+    color: var(--bs-heading-color);
+    font-size: .7109375rem;
+    font-weight: 600;
+    letter-spacing: .03125rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem
 }

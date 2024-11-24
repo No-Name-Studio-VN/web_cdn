@@ -1,4 +1,4 @@
-let fileList=$("#fileList"),formatFileSize=e=>{var t;return 0===e?"0 Bytes":(t=Math.floor(Math.log(e)/Math.log(1024)),parseFloat((e/Math.pow(1024,t)).toFixed(2))+" "+["Bytes","KB","MB","GB","TB"][t])};function createFileElement(e){let{fileTitle:t,fileType:i,uploadedAt:a,_id:s,fileSize:l}=e,n="/files/file/"+s;var e=`
+(async()=>{let p=$("#fileList");function t(e){let{fileTitle:t,fileType:i,uploadedAt:a,_id:s,fileSize:n}=e,l="/files/file/"+s;var e=`
     <li class="list-group-item">
         <div class="row align-items-center py-3">
           <div class="col-auto">
@@ -9,11 +9,11 @@ let fileList=$("#fileList"),formatFileSize=e=>{var t;return 0===e?"0 Bytes":(t=M
 
           <div class="col">
             <h5 class="mb-0">
-              <a href="${n}">${t}</a>
+              <a href="${l}">${t}</a>
             </h5>
             <ul class="list-inline list-separator small text-body">
               <li class="list-inline-item">${moment(a).fromNow()}</li>
-              <li class="list-inline-item">${formatFileSize(l)}</li>
+              <li class="list-inline-item">${e=n,0===e?"0 Bytes":(o=Math.floor(Math.log(e)/Math.log(1024)),parseFloat((e/Math.pow(1024,o)).toFixed(2))+" "+["Bytes","KB","MB","GB","TB"][o])}</li>
             </ul>
           </div>
 
@@ -33,4 +33,4 @@ let fileList=$("#fileList"),formatFileSize=e=>{var t;return 0===e?"0 Bytes":(t=M
             </div>
           </div>
         </div>
-      </li>`,o=document.createElement("template");o.innerHTML=e.trim();let d=o.content.firstElementChild;var e=d.querySelector(".share"),o=d.querySelector(".down"),r=d.querySelector(".delete");e.addEventListener("click",()=>{window.ContentHandler.Share(n)}),o.addEventListener("click",()=>{window.location.href=n}),r.addEventListener("click",async()=>{try{var e;window.confirm("Bạn có chắc chắn muốn xóa tệp tin này không?")&&(e=(await $.post(`/api/files/${s}/delete`)).success,e?d.remove():window.NotificationHandler.show({content:"Không thể xóa tệp tin này.",type:"error"}))}catch(e){window.NotificationHandler.show({content:"Không thể xóa tệp tin này.",type:"error"})}}),fileList.append(d)}(async()=>{var e=(await $.get("/api/users/@me/files")).data;e?e.forEach(e=>createFileElement(e)):fileList.append("<li class='list-group-item'>Không có tệp tin nào.</li>")})();
+      </li>`,o=document.createElement("template");o.innerHTML=e.trim();let d=o.content.firstElementChild;var e=d.querySelector(".share"),r=d.querySelector(".down"),c=d.querySelector(".delete");e.addEventListener("click",()=>{window.ContentHandler.Share(l)}),r.addEventListener("click",()=>{window.location.href=l}),c.addEventListener("click",async()=>{try{var e;window.confirm("Bạn có chắc chắn muốn xóa tệp tin này không?")&&(e=(await $.post(`/api/files/${s}/delete`)).success,e?d.remove():window.NotificationHandler.show({content:"Không thể xóa tệp tin này.",type:"error"}))}catch(e){window.NotificationHandler.show({content:"Không thể xóa tệp tin này.",type:"error"})}}),p.append(d)}var e=(await $.get("/api/users/@me/files")).data;e?e.forEach(e=>t(e)):p.append("<li class='list-group-item'>Không có tệp tin nào.</li>")})();
