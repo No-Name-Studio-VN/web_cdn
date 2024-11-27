@@ -11,7 +11,7 @@
                 <div class="text-center">
                     <h4 class="my-2">Thanh toán 1 lượt tải tài liệu với giá 5000đ</h4>
                     <span class="my-2">Nội dung thanh toán: <strong>Mã sinh viên</strong></span>
-                    <input type="file" class="form-control my-2" id="paymentFile" accept=".jpg,.jpeg,.png,.gif,.webp">
+                    <input type="file" class="form-control my-2" id="paymentFile" accept=".jpg,.jpeg,.png,.gif,.webp" placeholder="Chứng minh thanh toán">
                 </div>
                 `,`<button type="button" class="btn btn-dark" data-bs-dismiss="modal">Đóng</button>
                  <button type="button" class="btn btn-primary" id="paymentBtn">Thanh toán</button>`),$("#paymentBtn").one("click",async()=>{$("#paymentFile")[0].files[0]?await g()&&y({...t,downloadsRemaining:t.downloadsRemaining+1}):window.NotificationHandler.show({title:"Lỗi thanh toán",content:"Vui lòng cung cấp minh chứng thanh toán",type:"error"})})):(p("Tải tài liệu",`

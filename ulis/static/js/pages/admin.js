@@ -31,11 +31,12 @@ function docsButtonActions(t,e,a){return`
                   <tr>
                     <th data-field="fileType" data-sortable="true" scope="col" data-formatter="TitleButtonPill">Loại</th>
                     <th data-field="fileTitle" data-sortable="true" scope="col" data-formatter="formatTitle">Tên tài liệu</th>
-                    <th data-field="course" data-sortable="true" scope="col"">Môn học</th>
+                    <th data-field="course" data-sortable="true" scope="col" data-formatter="formatLongContent">Môn học</th>
                     <th data-field="description" data-sortable="true" scope="col" data-formatter="formatLongContent">Nhận xét GV</th>
-                    <th data-field="department" data-sortable="true" scope="col">Đơn vị</th>
-                    <th data-field="schoolYear" data-sortable="true" scope="col">Năm</th>
+                    <th data-field="department" data-sortable="true" scope="col" data-formatter="formatLongContent">Đơn vị</th>
+                    <th data-field="schoolYear" data-sortable="true" scope="col" data-formatter="formatLongContent">Năm</th>
                     <th data-field="isVerified" data-sortable="true" scope="col" data-formatter="formatVerify">Đã xác minh</th>
+                    <th data-field="integrityFileUrl" data-sortable="true" scope="col" data-formatter="formatStudentId">Ảnh minh chứng</th>
                     ${i?'<th data-field="_id" scope="col" data-formatter="docsButtonActions">Chức năng</th>':""}
                   </tr>
                 </thead>
@@ -60,4 +61,4 @@ function docsButtonActions(t,e,a){return`
                     </thead>
                     <tbody id="users_table_content"></tbody>
                 </table>
-            </div>`);n.innerHTML=a;let e=[];t.documents.forEach(t=>{e.push({_id:t._id,fileTitle:{url:"/files/file/"+t._id,title:t.fileTitle},description:t.description,department:t.department,schoolYear:t.schoolYear,fileType:FILE_TYPES_LABELS[t.fileType],isVerified:t.isVerified,course:t.course})}),$("#documents_table").bootstrapTable({...window.CustomBT_Config,cookieIdTable:"documents_table",toolbar:"#documents_table_toolbar",data:e}),$("#users_table").bootstrapTable({...window.CustomBT_Config,cookieIdTable:"users_table",toolbar:"#users_table_toolbar",data:t.users}),i&&(s(),$("#documents_table").on("all.bs.table",function(t,e){s()}),d(),$("#users_table").on("all.bs.table",function(t,e){d()}))}else logger.error(t.error),window.NotificationHandler.show({content:"Error fetching stats",type:"error"})})}c()})();
+            </div>`);n.innerHTML=a;let e=[];t.documents.forEach(t=>{e.push({_id:t._id,fileTitle:{url:"/files/file/"+t._id,title:t.fileTitle},description:t.description,department:t.department,schoolYear:t.schoolYear,fileType:FILE_TYPES_LABELS[t.fileType],isVerified:t.isVerified,course:t.course,integrityFileUrl:t.integrityFileUrl})}),$("#documents_table").bootstrapTable({...window.CustomBT_Config,cookieIdTable:"documents_table",toolbar:"#documents_table_toolbar",data:e}),$("#users_table").bootstrapTable({...window.CustomBT_Config,cookieIdTable:"users_table",toolbar:"#users_table_toolbar",data:t.users}),i&&(s(),$("#documents_table").on("all.bs.table",function(t,e){s()}),d(),$("#users_table").on("all.bs.table",function(t,e){d()}))}else logger.error(t.error),window.NotificationHandler.show({content:"Error fetching stats",type:"error"})})}c()})();
